@@ -51,8 +51,29 @@ p {
 }
 #git-link {
   position: relative;
-  bottom: -80px;
+  bottom: -110px;
+  font-size: 12px;
 }
 #description {
   text-transform: capitalize;
+}
+#submit-btn {
+  border-radius: 8px;
+  box-shadow: 4px 4px 4px #6e86a4;
+  background-color: #c5d8f1;
+  transition: all 100ms ease-in;
+}
+#submit-btn:hover {
+  cursor: pointer;
+  background-color: #fff;
+}
+button {
+  border-radius: 7px;
+  background-color: #c5d8f1;
+  box-shadow: 4px 4px 4px #6e86a4;
+  transition: all 100ms ease-in-out;
+}
+button:hover {
+  cursor: pointer;
+  background-color: #fff;
 }
