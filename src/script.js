@@ -38,7 +38,8 @@ form.addEventListener("submit", searching);
 
 function temperature(response) {
   document.querySelector("#city-display").innerHTML = response.data.name;
-  document.querySelector("#number").innerHTML = Math.round(
+  document.querySelector("#description").innerHTML = response.weather[0].main;
+  response.document.querySelector("#number").innerHTML = Math.round(
     response.data.main.temp
   );
   document.querySelector("#description").innerHTML =
