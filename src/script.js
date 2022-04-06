@@ -38,12 +38,14 @@ form.addEventListener("submit", searching);
 
 function temperature(response) {
   document.querySelector("#city-display").innerHTML = response.data.name;
-  document.querySelector("#description").innerHTML = response.weather[0].main;
-  response.document.querySelector("#number").innerHTML = Math.round(
+  document.querySelector("#number").innerHTML = Math.round(
     response.data.main.temp
   );
+  document.querySelector("#feels-like").innerHTML = Math.round(
+    response.data.main.feels_like
+  );
   document.querySelector("#description").innerHTML =
-    response.data.weather[0].main;
+    response.data.weather[0].description;
 }
 
 function getCurrentLocation(event) {
