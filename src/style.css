@@ -53,3 +53,6 @@ p {
   position: relative;
   bottom: -80px;
 }
+#description {
+  text-transform: capitalize;
+}
