@@ -46,14 +46,19 @@ function temperature(response) {
   );
   document.querySelector("#description").innerHTML =
     response.data.weather[0].description;
+  document.querySelector("#wind").innerHTML = Math.round(
+    response.data.wind.speed
+  );
+  document.querySelector("#humidity").innerHTML = Math.round(
+    response.data.main.humidity
+  );
 }
-
 function getCurrentLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(retrieveLocation);
 }
 function retrieveLocation(position) {
-  //position.preventDefault();
+  //posit ion.preventDefault();
   let apiKey = "156d56571be94f1383a53abf8e9ae72f";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}`;
 
