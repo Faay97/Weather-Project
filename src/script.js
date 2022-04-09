@@ -24,17 +24,21 @@ let day = document.querySelector(".day");
 
 day.innerHTML = formatDate(currentTime);
 
-function searching(event) {
-  event.preventDefault();
-  let search = document.querySelector("#search-input").value;
+function searching(city) {
   let apiKey = "156d56571be94f1383a53abf8e9ae72f";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${search}&appid=${apiKey}`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
 
   axios.get(`${apiUrl}&units=metric`).then(temperature);
 }
 
+function enterSubmit(event) {
+  event.preventDefault();
+  let searchElement = document.querySelector("#search-input");
+  searching(searchElement.value);
+}
+
 let form = document.querySelector("#city-search");
-form.addEventListener("submit", searching);
+form.addEventListener("submit", enterSubmit);
 
 function temperature(response) {
   celciusTemp = response.data.main.temp;
@@ -63,7 +67,6 @@ function getCurrentLocation(event) {
   navigator.geolocation.getCurrentPosition(retrieveLocation);
 }
 function retrieveLocation(position) {
-  //position.preventDefault();
   let apiKey = "156d56571be94f1383a53abf8e9ae72f";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}`;
 
@@ -95,3 +98,5 @@ let celsiusLink = document.querySelector("#cels");
 celsiusLink.addEventListener("click", displayCelsius);
 
 let celciusTemp = null;
+
+searching("Toronto");
