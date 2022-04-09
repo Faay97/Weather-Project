@@ -17,7 +17,7 @@ h2 {
   font-size: 100px;
 }
 .degree {
-  font-size: 40px;
+  font-size: 35px;
   position: relative;
   top: -40px;
 }
@@ -77,4 +77,11 @@ button {
 button:hover {
   cursor: pointer;
   background-color: #fff;
+}
+.active {
+  color: #000000;
+  cursor: default;
+}
+.active:hover {
+  text-decoration: none;
 }
