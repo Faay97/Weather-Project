@@ -24,6 +24,29 @@ let day = document.querySelector(".day");
 
 day.innerHTML = formatDate(currentTime);
 
+function displayForecast(day) {
+  let forecast = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+  let days = ["Wed", "Thu", "Fri", "Sat", "Sun"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+        <div class="col">
+          <div class="forecast-date">${day}</div>  
+         <img
+          id="icon"
+          src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+          alt="clouds" width="42"
+        />
+          <div class="forecast-temperature">13°</div>
+        
+    `;
+    forecastHTML = forecastHTML + `</div>`;
+    forecast.innerHTML = forecastHTML;
+  });
+}
+
 function searching(city) {
   let apiKey = "156d56571be94f1383a53abf8e9ae72f";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
@@ -100,3 +123,4 @@ celsiusLink.addEventListener("click", displayCelsius);
 let celciusTemp = null;
 
 searching("Toronto");
+displayForecast();

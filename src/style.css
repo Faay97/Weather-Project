@@ -37,9 +37,10 @@ body {
 }
 .container {
   display: block;
+  text-align: center;
   background-color: #6e86a4;
   padding: 25px;
-  margin: 20px 0 20px 50px;
+  margin: 0 auto;
   border-radius: 7px;
   font-size: 30px;
   font-family: monospace;
