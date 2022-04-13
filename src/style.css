@@ -53,11 +53,12 @@ p {
 }
 #git-link {
   position: relative;
-  bottom: -110px;
+  bottom: -50px;
   font-size: 12px;
 }
 #description {
   text-transform: capitalize;
+  opacity: 0.8;
 }
 #submit-btn {
   border-radius: 8px;
@@ -85,4 +86,7 @@ button:hover {
 }
 .active:hover {
   text-decoration: none;
+}
+.forecast-min {
+  opacity: 0.6;
 }

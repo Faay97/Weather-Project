@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Weather Projectx</title>
+    <title>Tee-Weather</title>
     <script
       src="https://kit.fontawesome.com/6c2be83cf3.js"
       crossorigin="anonymous"
@@ -27,9 +27,22 @@
   <body>
     <div>
       <form id="city-search">
-        <input type="city" placeholder="Enter City" id="search-input" />
-        <input type="submit" value="Search" id="submit-btn" />
-        <button id="location">Current Location</button>
+        <div class="row">
+          <div class="col-9">
+            <input
+              type="city"
+              placeholder="Enter City"
+              id="search-input"
+              class="form-control search-input"
+            />
+          </div>
+          <div class="col-md-auto">
+            <input type="submit" value="Search" id="submit-btn" />
+          </div>
+          <div class="col-md-auto">
+            <button id="location">Current Location</button>
+          </div>
+        </div>
       </form>
     </div>
     <h1>
@@ -58,7 +71,6 @@
     </h2>
     <p>Feels like <span id="feels-like">6</span>°</p>
     <br />
-
     <div class="container" id="forecast"></div>
 
     <span id="git-link">
@@ -77,7 +89,6 @@
       >
       Coded by Favour Umoru
     </span>
-
     <script src="src/script.js"></script>
   </body>
 </html>
