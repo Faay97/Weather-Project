@@ -5,7 +5,7 @@
   border-radius: 20px;
 }
 h1 {
-  margin-left: 35px;
+  margin: 15px 35px;
 }
 h2 {
   font-family: "Roboto", sans-serif;
@@ -27,13 +27,14 @@ a {
 body {
   background-color: #c5d8f1;
   font-family: "Roboto", sans-serif;
+  padding: 14px;
 }
 #city-display {
-  font-size: 50px;
+  font-size: 60px;
   font-weight: 700;
 }
 .day {
-  color: rgb(19, 19, 143);
+  color: rgb(3, 3, 90);
 }
 .container {
   display: block;
@@ -49,16 +50,16 @@ p {
   text-align: right;
   margin-right: 40px;
   font-size: 20px;
-  color: blue;
+  color: rgb(1, 1, 36);
 }
 #git-link {
   position: relative;
-  bottom: -50px;
+  bottom: -10px;
   font-size: 12px;
 }
 #description {
   text-transform: capitalize;
-  opacity: 0.8;
+  opacity: 0.7;
 }
 #submit-btn {
   border-radius: 8px;
@@ -89,4 +90,12 @@ button:hover {
 }
 .forecast-min {
   opacity: 0.6;
+}
+.humid-wind {
+  opacity: 0.8;
+}
+form {
+  display: block;
+  padding-left: 550px;
+  padding-bottom: 25px;
 }

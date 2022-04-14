@@ -31,15 +31,15 @@
           <div class="col-9">
             <input
               type="city"
-              placeholder="Enter City"
+              placeholder="Enter City.."
               id="search-input"
               class="form-control search-input"
             />
           </div>
-          <div class="col-md-auto">
-            <input type="submit" value="Search" id="submit-btn" />
+          <div class="col-auto p-0">
+            <input type="submit" value="Search " id="submit-btn" />
           </div>
-          <div class="col-md-auto">
+          <div class="col-auto p-0">
             <button id="location">Current Location</button>
           </div>
         </div>
@@ -47,9 +47,7 @@
     </div>
     <h1>
       <div id="city-display">Toronto</div>
-      <br />
       <span class="day"> Today </span>
-
       <div id="description">Clouds</div>
     </h1>
     <h2>
@@ -66,8 +64,10 @@
           >
         </span>
       </div>
-      Humidity: <span id="humidity">70</span>%
-      <div>Wind: <span id="wind">2</span>km/h</div>
+      <div class="humid-wind">
+        Humidity: <span id="humidity">70</span>%
+        <div>Wind: <span id="wind">2</span>km/h</div>
+      </div>
     </h2>
     <p>Feels like <span id="feels-like">6</span>°</p>
     <br />
