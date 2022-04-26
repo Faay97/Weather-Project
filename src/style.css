@@ -27,7 +27,7 @@ a {
 body {
   background-color: #c5d8f1;
   font-family: "Roboto", sans-serif;
-  padding: 14px;
+  padding: 14px auto;
 }
 #city-display {
   font-size: 60px;
@@ -96,6 +96,6 @@ button:hover {
 }
 form {
   display: block;
-  padding-left: 550px;
+  padding-left: 150px;
   padding-bottom: 25px;
 }

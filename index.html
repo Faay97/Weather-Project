@@ -27,7 +27,7 @@
   <body>
     <div>
       <form id="city-search">
-        <div class="row">
+        <div class="row d-flex">
           <div class="col-9">
             <input
               type="city"
@@ -37,10 +37,17 @@
             />
           </div>
           <div class="col-auto p-0">
-            <input type="submit" value="Search " id="submit-btn" />
+            <input
+              class="btn btn-primary btn-sm"
+              type="submit"
+              value="Search "
+              id="submit-btn"
+            />
           </div>
           <div class="col-auto p-0">
-            <button id="location">Current Location</button>
+            <button class="btn btn-primary btn-sm d-inline" id="location">
+              Current Location
+            </button>
           </div>
         </div>
       </form>
